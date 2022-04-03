@@ -1,0 +1,414 @@
+﻿/*  ===========================================
+加分亮點 - 新增加分亮點跳窗(應該)
+===============================================  */
+
+.exhibitList {
+	width: 780px;
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+	.exhibitList ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.exhibitList .lfloat {
+		float: left
+	}
+
+	.exhibitList .one {
+		margin: 5px 15px;
+		width: 320px;
+		background-color: #fff;
+		border: 1px solid #111;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+		.exhibitList .one li {
+			position: relative;
+		}
+
+		.exhibitList .one .year {
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 23px;
+			text-align: center;
+			border-left: 0;
+		}
+
+		.exhibitList .one .name {
+			line-height: 23px;
+			color: #fff;
+			text-align: center;
+			background-color: #111;
+			font-weight: bold;
+			margin-bottom: 3px;
+		}
+
+		.exhibitList .one .image {
+			height: 230px;
+			text-align: center;
+		}
+
+			.exhibitList .one .image .imgShow {
+				position: relative;
+				z-index: 0;
+			}
+
+				.exhibitList .one .image .imgShow img {
+					border: 0;
+					cursor: pointer;
+				}
+
+					.exhibitList .one .image .imgShow img.smallImg {
+						max-width: 320px;
+						max-height: 200px;
+					}
+
+		.exhibitList .one .description {
+			position: absolute;
+			left: 0;
+			bottom: -1px;
+			background-color: #111;
+			opacity: 0.8;
+			-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 88);
+			filter: alpha(opacity = 80);
+			text-align: left;
+			color: #fff;
+			overflow: hidden;
+			width: 316px;
+			padding: 2px 2px 0 2px;
+			height: 35px;
+			cursor: pointer;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 10;
+		}
+
+		.exhibitList .one .editBox {
+			clear: both;
+			background-color: #C5E8FF;
+			height: 23PX;
+			line-height: 23px;
+			text-align: right;
+			padding-right: 5px;
+		}
+
+.iconOffice {
+	background: url(../../img/Resume/memberCenterExhibit.png) no-repeat top left;
+	display: inline-block;
+}
+
+.icon-excel {
+	background-position: 0 -20px;
+	width: 128px;
+	height: 128px;
+}
+
+.icon-pdf {
+	background-position: 0 -188px;
+	width: 128px;
+	height: 128px;
+}
+
+.icon-web {
+	background-position: 0 -860px;
+	width: 128px;
+	height: 128px;
+}
+
+.icon-powerpoint {
+	background-position: 0 -356px;
+	width: 128px;
+	height: 128px;
+}
+
+.icon-word {
+	background-position: 0 -524px;
+	width: 128px;
+	height: 128px;
+}
+
+.icon-zip_rar {
+	background-position: 0 -692px;
+	width: 128px;
+	height: 128px;
+}
+
+.exhibitList .one .image .imgShow img.boxshadow {
+	border: 5px solid #666;
+	box-shadow: #666 -10px 5px 10px;
+	-webkit-box-shadow: #666 -10px 5px 10px;
+	-moz-box-shadow: #666 -10px 5px 10px;
+	border-radius: 10px;
+}
+
+.arrowUp {
+	border: 10px solid rgba(0, 0, 0, 0);
+	border-bottom-color: #AFADAD;
+	width: 0;
+	height: 0;
+	margin: -10px auto 0;
+}
+
+.arrowDown {
+	border: 10px solid rgba(0, 0, 0, 0);
+	border-top-color: #AFADAD;
+	width: 0;
+	height: 0;
+	margin: 0 auto -10px;
+}
+
+#exhibitEdit {
+	max-width: 600px;
+	margin: auto;
+	padding: 0 1rem 0.5rem;
+}
+
+	#exhibitEdit span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+#exhibitType label {
+	margin-right: 3px;
+}
+
+#exhibitType, #exhibit {
+	margin: 10px auto; /*max-width:430px;*/
+}
+
+	#exhibit div {
+		margin: 10px 0;
+	}
+
+	#exhibit #existImageDes {
+		margin: 0;
+	}
+
+	#exhibit #imgNote {
+		color: #fa626b;
+		font-size: .875rem;
+		margin: 0;
+		text-align: center;
+	}
+
+	#exhibit div.filearea {
+		margin: 0;
+	}
+
+	#exhibit div.example_img {
+		max-width: 456px;
+		margin: 0.25rem 0.8rem auto auto;
+	}
+
+#dropDIV1, #dropDIV2 {
+	position: relative;
+	text-align: center;
+	min-height: 150px;
+	background-color: #F1F7FB;
+	cursor: pointer;
+	/*margin-left:-4px;*/
+	border: 1px solid #DDE3E8;
+	/*padding: 0 1rem;*/
+}
+
+#dropDIV1, #dropDIV2, #exhibitName, #exhibitDes, #youtubeUrl, #webpageUrl { /*max-width: 320px; width: 80%;*/
+	width: calc(100% - 7rem);
+}
+
+	#dropDIV1 .filearea {
+		position: relative;
+		display: block;
+		height: 150px;
+		overflow: hidden;
+	}
+
+		#dropDIV1 .filearea > p, #dropDIV1 .filearea > span {
+			padding: 0 5px;
+		}
+
+		#dropDIV1 .filearea img {
+			max-width: 100% !important;
+			max-height: 100% !important;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			display: block;
+		}
+
+#existImage {
+	max-height: 200px;
+	max-width: 320px;
+}
+
+#chooseFile1, #chooseFile2 {
+	height: 0px;
+	visibility: hidden;
+}
+
+#chooseFile1 {
+	width: 100%;
+}
+
+#exhibitDes {
+	height: 100px;
+	vertical-align: middle;
+}
+
+.originalDisplayInfo {
+	margin-top: 0;
+}
+
+#exhibitEdit .radio-list {
+	width: calc(100% - 7rem);
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#exhibitEdit .bf {
+	font-size: 30px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px dashed #E5E9F2;
+	margin-bottom: 0.5rem;
+}
+
+#exhibitEdit .add-title {
+	margin-bottom: 0.5rem;
+}
+
+#exhibitEdit .add-info {
+	color: #72828a;
+	font-size: .875rem;
+}
+
+#exhibitEdit .add-format {
+	color: #fa626b;
+}
+
+#exhibitEdit .send-out {
+	text-align: center;
+	padding: 0.5rem;
+	border-top: 1px dashed #ccc;
+	padding-top: 1rem
+}
+
+#exhibitEdit .itm { /*max-width: 80px; width: 19%;*/
+	vertical-align: top;
+	vertical-align: middle; /*text-align:right;*/
+	width: 6rem;
+}
+
+#exhibitEdit .year { /*width:70px;*/
+}
+
+#exhibitEdit em {
+	color: #fa626b;
+	padding-right: 3px;
+	font-style: normal;
+}
+
+#exhibitEdit .ophelp {
+	margin: 0;
+}
+
+#webpageSnapshot img {
+	max-height: 200px;
+	max-width: 320px;
+	border: 1px solid #CCC;
+}
+
+.loading {
+	border: 0;
+	position: absolute;
+	left: 250px;
+	bottom: 120px;
+	background-color: #000;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: none;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	background-color: #111;
+	padding: 10px 5px;
+	color: #FFF;
+	opacity: 0.8;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 88);
+	filter: alpha(opacity = 80);
+	top: 0px;
+	left: 0px;
+}
+
+@media all and (max-width: 497px) {
+	#dropDIV1, #dropDIV2, #exhibitName, #exhibitDes, #youtubeUrl, #webpageUrl {
+		width: 100%;
+	}
+
+	#exhibitEdit .itm {
+		width: 100%;
+		display: block;
+	}
+
+	#exhibitEdit .year {
+		width: 100%;
+	}
+
+	#exhibitEdit .radio-list {
+		width: 100%;
+		display: block;
+	}
+}
+
+
+/*檔案下載*/
+#listWithHandle .download-box {
+	display: block;
+	text-align: center;
+	background-color: #F5F6FA;
+}
+
+	#listWithHandle .download-box .download {
+		display: block;
+		font-size: 1rem;
+		z-index: 1;
+		position: relative;
+	}
+
+
+/*  ===========================================
+加分亮點 - 新增加分亮點跳窗  -->  已輸入字數
+===============================================  */
+#exhibit .originalDisplayInfo {
+	text-align: right;
+	font-size: 13px;
+	color: #a7b1b6;
+	margin-top: 2px;
+	padding: 0 1rem;
+}
+
+@media all and (max-width: 497px) {
+	#exhibit .originalDisplayInfo {
+		text-align: center;
+		padding: 0;
+	}
+}
+
+.warningDisplayInfo {
+	text-align: right;
+	font-size: 13px;
+	color: #96201A;
+	margin-top: 5px;
+}

@@ -1,0 +1,248 @@
+$(document).ready(function(){
+    /*menu 主題配色 換主題色*/
+    $("#changeMColor").change(changeTheme);
+}); 
+
+function changeTheme(){
+    var v = $("#changeMColor").val();
+    var a = getThemeLink(v);
+    $("#mcolor").attr({href:a});
+    $(".mbg").removeAttr("style").animate({opacity:1},1000);
+    $(".rightBar").css("opacity",0).animate({opacity:1},1000);
+}
+
+function getThemeLink(value) {
+    var a;
+    switch(value.toString()){
+        case "0":
+            a = "";
+            break;
+        case "1":
+            a = "/Content/css/CustomResume/backstage_red.css";
+            break;
+        case "2":
+            a = "/Content/css/CustomResume/backstage_darkBluePurple.css";
+            break;
+        case "3":
+            a = "/Content/css/CustomResume/backstage_darkBlueOrange.css";
+            break;
+        case "4":
+            a = "/Content/css/CustomResume/backstage_pink.css";
+            break;
+        case "5":
+            a = "/Content/css/CustomResume/backstage_green.css";
+            break;
+        case "6":
+            a = "/Content/css/CustomResume/backstage_brown.css";
+            break;
+        case "7":
+            a = "/Content/css/CustomResume/backstage_darkBlue.css";
+            break;
+        case "8":
+            a = "/Content/css/CustomResume/backstage_P01_black_main.css";
+            break;
+        case "9":
+            a = "/Content/css/CustomResume/backstage_P01_gray_main.css";
+            break;
+        case "10":
+            a = "/Content/css/CustomResume/backstage_P01_green_main.css";
+            break;
+        case "11":
+            a = "/Content/css/CustomResume/backstage_P01_orange_main.css";
+            break;
+        case "12":
+            a = "/Content/css/CustomResume/backstage_P01_purple_main.css";
+            break;
+        case "13":
+            a = "/Content/css/CustomResume/backstage_P01_red_main.css";
+            break;
+        case "14":
+            a = "/Content/css/CustomResume/backstage_P02_B_blue_main.css";
+            break;
+        case "15":
+            a = "/Content/css/CustomResume/backstage_P02_B_green_main.css";
+            break;
+        case "16":
+            a = "/Content/css/CustomResume/backstage_P02_B_yellow_main.css";
+            break;
+        case "17":
+            a = "/Content/css/CustomResume/backstage_P02_green_main.css";
+            break;
+        case "18":
+            a = "/Content/css/CustomResume/backstage_P02_yellow_main.css";
+            break;
+        case "19":
+            a = "/Content/css/CustomResume/backstage_P03_black_main.css";
+            break;
+        case "20":
+            a = "/Content/css/CustomResume/backstage_P03_green_main.css";
+            break;
+        case "21":
+            a = "/Content/css/CustomResume/backstage_P03_indigo_main.css";
+            break;
+        case "22":
+            a = "/Content/css/CustomResume/backstage_P03_orange_main.css";
+            break;
+        case "23":
+            a = "/Content/css/CustomResume/backstage_P03_pink_main.css";
+            break;
+        case "24":
+            a = "/Content/css/CustomResume/backstage_P04_aqua_main.css";
+            break;
+        case "25":
+            a = "/Content/css/CustomResume/backstage_P04_black_main.css";
+            break;
+        case "26":
+            a = "/Content/css/CustomResume/backstage_P04_green_main.css";
+            break;
+        case "27":
+            a = "/Content/css/CustomResume/backstage_P04_kelly_main.css";
+            break;
+        case "28":
+            a = "/Content/css/CustomResume/backstage_P04_purple_main.css";
+            break;
+        case "29":
+            a = "/Content/css/CustomResume/backstage_P04_red_main.css";
+            break;
+        case "30":
+            a = "/Content/css/CustomResume/backstage_P05_black_main.css";
+            break;
+        case "31":
+            a = "/Content/css/CustomResume/backstage_P05_brown_main.css";
+            break;
+        case "32":
+            a = "/Content/css/CustomResume/backstage_P05_green_main.css";
+            break;
+        case "33":
+            a = "/Content/css/CustomResume/backstage_P05_kelly_main.css";
+            break;
+        case "34":
+            a = "/Content/css/CustomResume/backstage_P05_purple_main.css";
+            break;
+        case "35":
+            a = "/Content/css/CustomResume/backstage_P05_red_main.css";
+            break;
+        case "36":
+            a = "/Content/css/CustomResume/";
+            break;
+    }
+    return a + "?v=202103300";
+}
+
+function getPrintThemeLink(value) {
+    var a;
+    switch(value.toString()){
+        case "0":
+            a = "";
+            break;
+        case "1":
+            a = "/Content/css/CustomResume/backstage_red.css";
+            break;
+        case "2":
+            a = "/Content/css/CustomResume/backstage_darkBluePurple.css";
+            break;
+        case "3":
+            a = "/Content/css/CustomResume/backstage_darkBlueOrange.css";
+            break;
+        case "4":
+            a = "/Content/css/CustomResume/backstage_pink.css";
+            break;
+        case "5":
+            a = "/Content/css/CustomResume/backstage_green.css";
+            break;
+        case "6":
+            a = "/Content/css/CustomResume/backstage_brown.css";
+            break;
+        case "7":
+            a = "/Content/css/CustomResume/backstage_darkBlue.css";
+            break;
+        case "8":
+            a = "/Content/css/CustomResume/backstage_P01_black-print_main.css";
+            break;
+        case "9":
+            a = "/Content/css/CustomResume/backstage_P01_gray-print_main.css";
+            break;
+        case "10":
+            a = "/Content/css/CustomResume/backstage_P01_green-print_main.css";
+            break;
+        case "11":
+            a = "/Content/css/CustomResume/backstage_P01_orange-print_main.css";
+            break;
+        case "12":
+            a = "/Content/css/CustomResume/backstage_P01_purple-print_main.css";
+            break;
+        case "13":
+            a = "/Content/css/CustomResume/backstage_P01_red-print_main.css";
+            break;
+        case "14":
+            a = "/Content/css/CustomResume/backstage_P02_B_blue-print_main.css";
+            break;
+        case "15":
+            a = "/Content/css/CustomResume/backstage_P02_B_green-print_main.css";
+            break;
+        case "16":
+            a = "/Content/css/CustomResume/backstage_P02_B_yellow-print_main.css";
+            break;
+        case "17":
+            a = "/Content/css/CustomResume/backstage_P02_green-print_main.css";
+            break;
+        case "18":
+            a = "/Content/css/CustomResume/backstage_P02_yellow-print_main.css";
+            break;
+        case "19":
+            a = "/Content/css/CustomResume/backstage_P03_black-print_main.css";
+            break;
+        case "20":
+            a = "/Content/css/CustomResume/backstage_P03_green-print_main.css";
+            break;
+        case "21":
+            a = "/Content/css/CustomResume/backstage_P03_indigo-print_main.css";
+            break;
+        case "22":
+            a = "/Content/css/CustomResume/backstage_P03_orange-print_main.css";
+            break;
+        case "23":
+            a = "/Content/css/CustomResume/backstage_P03_pink-print_main.css";
+            break;
+        case "24":
+            a = "/Content/css/CustomResume/backstage_P04_aqua-print_main.css";
+            break;
+        case "25":
+            a = "/Content/css/CustomResume/backstage_P04_black-print_main.css";
+            break;
+        case "26":
+            a = "/Content/css/CustomResume/backstage_P04_green-print_main.css";
+            break;
+        case "27":
+            a = "/Content/css/CustomResume/backstage_P04_kelly-print_main.css";
+            break;
+        case "28":
+            a = "/Content/css/CustomResume/backstage_P04_purple-print_main.css";
+            break;
+        case "29":
+            a = "/Content/css/CustomResume/backstage_P04_red-print_main.css";
+            break;
+        case "30":
+            a = "/Content/css/CustomResume/backstage_P05_black-print_main.css";
+            break;
+        case "31":
+            a = "/Content/css/CustomResume/backstage_P05_brown-print_main.css";
+            break;
+        case "32":
+            a = "/Content/css/CustomResume/backstage_P05_green-print_main.css";
+            break;
+        case "33":
+            a = "/Content/css/CustomResume/backstage_P05_kelly-print_main.css";
+            break;
+        case "34":
+            a = "/Content/css/CustomResume/backstage_P05_purple-print_main.css";
+            break;
+        case "35":
+            a = "/Content/css/CustomResume/backstage_P05_red-print_main.css";
+            break;
+        case "36":
+            a = "/Content/css/CustomResume/";
+            break;
+    }
+    return a + "?v=202103300";
+}
